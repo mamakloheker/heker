@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to our Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Basic styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4; /* Change to a solid color */
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('https://i.ibb.co/Bt2cKrF/16402853-779290608891443-1991128084586875543-o.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      text-align: center;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #007bff; /* Change header color */
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      margin: 10px;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    /* Grid layout for buttons */
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+    }
+
+    /* Hidden options for hamsters */
+    .hamster-options {
+      display: none; /* Initially hidden */
+      margin-top: 20px;
+    }
+
+    /* Navigation styling */
+    nav {
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    /* Responsive styling */
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Welcome to syns4033</h1>
+    <p>We're excited to have you here! | No Army Can Stop Our Idea</p>
+    <div class="button-grid">
+      <a href="#" class="btn" onclick="toggleHamsterOptions()">Hamster Key Generator</a>
+    </div>
+    
+    <div class="hamster-options" id="hamsterOptions">
+      <a href="hamster1/" class="btn">Hamster Key Generator 1</a>
+      <a href="hamster2/" class="btn">Hamster Key Generator 2</a>
+      <a href="#" class="btn">Hamster Key Generator 3 (SOON)</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleHamsterOptions() {
+      const options = document.getElementById('hamsterOptions');
+      // Toggle the display property
+      if (options.style.display === 'none' || options.style.display === '') {
+        options.style.display = 'block';
+      } else {
+        options.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
